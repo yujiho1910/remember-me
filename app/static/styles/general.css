@@ -1,0 +1,32 @@
+@import url('topnav.css');
+@import url('index.css');
+
+* {
+    font-family: Helvetica;
+    font-size: medium;
+}
+
+body {
+    line-height: 1.618;
+    width: 60%;
+    margin: auto;
+    color: #4a4a4a;
+    background-color: #f9f9f9;
+}
+
+label {
+    font-style: italic;
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+
+select {
+    display: block;
+    width: inherit;
+    height: auto;
+    border-radius: 5px;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
