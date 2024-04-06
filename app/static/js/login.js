@@ -28,4 +28,7 @@ function login(e) {
     });
 };
 
-loginForm.addEventListener('submit', login);
+const el = document.getElementById('login-form');
+if (el) {
+  el.addEventListener('submit', login);
+}

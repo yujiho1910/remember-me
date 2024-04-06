@@ -4,8 +4,6 @@
 from flask import Flask
 
 # Third-party imports
-from sqlalchemy.orm import scoped_session
-
 
 # App imports
 
