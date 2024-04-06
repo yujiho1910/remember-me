@@ -12,16 +12,7 @@ from boto3.dynamodb.conditions import Attr
 
 def login():
     access = request.json.get('access')
-    return {
-        "message": "Content found",
-        "data": {'content_id': 'KONTENT'},
-        "success": True
-    }, 200
-    return {
-        "message": "Wrong user details",
-        "data": None,
-        "success": False
-    }, 400
+
     dynamodb = boto3.resource('dynamodb')
     content_table = dynamodb.Table('content-test')
 
@@ -31,10 +22,15 @@ def login():
     content = next(iter(scan_response["Items"]))
     if content:
         content_id = content["content_id"]
-        return redirect(f'/upload/{content_id}', code=200)
+
+        return {
+            "message": "Content found",
+            "data": {'content_id': content_id},
+            "success": True
+        }, 200
     else:
         return {
             "message": "Wrong user details",
             "data": None,
-            "error": "Auth failed"
+            "success": False
         }, 400
