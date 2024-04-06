@@ -1,5 +1,6 @@
 @import url('topnav.css');
 @import url('index.css');
+@import url('upload_auth.css');
 
 * {
     font-family: Helvetica;
@@ -8,10 +9,13 @@
 
 body {
     line-height: 1.618;
-    width: 60%;
     margin: auto;
     color: #4a4a4a;
     background-color: #f9f9f9;
+}
+
+img {
+    max-width: 100%;
 }
 
 label {

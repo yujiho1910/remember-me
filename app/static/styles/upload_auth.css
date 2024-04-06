@@ -1,0 +1,23 @@
+#image-box {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+#login-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#login-form-container {
+    bottom: 6vw;
+    position: absolute;
+}
+
+#login-form {
+    margin: auto;
+    padding: 8vw;
+    background-color: rgba(250, 250, 250, 0.9);
+}

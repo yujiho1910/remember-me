@@ -1,123 +1,126 @@
 {% extends "base.html" %}
 
 {% block content %}
-  {% include "components/topnav.html" %}
+  <div class="row">
+    <div class="col s8 push-s2">
+      {% include "components/topnav.html" %}
 
-  <div id="video-box">
-    <video autoplay loop muted id="hero-video">
-      <source src="../../static/videos/test.mp4" type="video/mp4">
-    </video>
-    <div id="tagline-box">
-      when you try your best<br>
-      but you don't succeed..
-    </div>
-  </div>
-  <div id="video-fade-box">
-    <div id="video-fade"></div>
-  </div>
-  <div id="about-us">
-    <div class="section-header">
-      About us
-    </div>
-    <div>
-      We are ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-    </div>
-    <div id="about-quote">
-      -- Cicero
-    </div>
-  </div>
-  <div id="support-section">
-    <div id="support-header">
-      Our most ardent supporters
-    </div>
-    <div id="support-box">
-      <div id="support"><img src="../static/images/softbank_logo.svg"></div>
-      <div id="support"><img src="../static/images/temasek.png"></div>
-    </div>
-  </div>
-  <div id="services-box">
-    <div class="section-header" id="services-header">
-      Services
-    </div>
-    <div id="bubble-left" class="bubble">
-      <div class="bubble-content">
-        <div class="bubble-header">
-          Broke
-        </div>
-        <div class="bubble-text">
-          Many hugs<br>
-          But just hugs
+      <!-- HERO VIDEO -->
+      <div id="video-box">
+        <video autoplay loop muted id="hero-video">
+          <source src="../../static/videos/test.mp4" type="video/mp4">
+        </video>
+        <div id="tagline-box">
+          when you try your best<br>
+          but you don't succeed..
         </div>
       </div>
-    </div>
-    <div id="bubble-center" class="bubble">
-      <div class="bubble-content">
-        <div class="bubble-header">
-          Woke
+      <div id="video-fade-box">
+        <div id="video-fade"></div>
+      </div>
+
+      <!-- ABOUT -->
+      <div id="about-us">
+        <div class="section-header">
+          About us
         </div>
-        <div class="bubble-text">
-          Included all Broke benefits<br>
-          Hosted gallery<br>
-          Massage
+        <div>
+          We are ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+          eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        </div>
+        <div id="about-quote">
+          -- Cicero
         </div>
       </div>
-    </div>
-    <div id="bubble-right" class="bubble">
-      <div class="bubble-content">
-        <div class="bubble-header">
-          Bespoke
+
+      <!-- SUPPORT -->
+      <div id="support-section">
+        <div id="support-header">
+          Our most ardent supporters
         </div>
-        <div class="bubble-text">
-          Contact us for bespoke services
+        <div id="support-box">
+          <div id="support"><img src="../static/images/softbank_logo.svg"></div>
+          <div id="support"><img src="../static/images/temasek.png"></div>
         </div>
       </div>
-    </div>
-  </div>
-  <div id="contact-section">
-    <div class="section-header" id="contact-header">
-      Contact us
-    </div>
-    <form id="contact-form">
-      <input type="text" name="contact-name" placeholder="Pingu">
-      <label>Contact name</label>
-      <input type="email" name="email" placeholder="pingu@bunnysoft.com">
-      <label>Email</label>
-      <input type="tel" name="phone-number" pattern="+65[8-9]{1}[0-9]{7}" placeholder="+65">
-      <label>Phone number (+65)</label>
-      <select name="service-type">
-        <option value="broke">Broke</option>
-        <option value="woke">Woke</option>
-        <option value="bespoke">Bespoke</option>
-      </select>
-      <label>Service type</label>
-      <div>
-        <input type="submit" id="submit-button">
+
+      <!-- SERVICES -->
+      <div id="services-box">
+        <div class="section-header" id="services-header">
+          Services
+        </div>
+        <div class="bubble-inline">
+          <!-- LEFT BUBBLE -->
+          <div class="bubble-container" id="left-bubble-container">
+            <div class="bubble">
+              <div class="bubble-header">
+                Broke
+              </div>
+              <div class="bubble-text">
+                Many hugs<br>
+                But just hugs
+              </div>
+            </div>
+          </div>
+
+          <!-- MID BUBBLE -->
+          <div class="bubble-container" id="mid-bubble-container">
+            <div class="big-bubble">
+              <div class="bubble-header">
+                Woke
+              </div>
+              <div class="bubble-text">
+                All Broke benefits<br>
+                Hosted gallery<br>
+                Massage (?!)
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT BUBBLE -->
+          <div class="bubble-container" id="right-bubble-container">
+            <div class="bubble">
+              <div class="bubble-header">
+                Bespoke
+              </div>
+              <div class="bubble-text">
+                Contact us for bespoke services
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </form>
-  </div>
-  <div>
-    <div id="busta">
-      Busta Rhymes Time
+
+      <!-- CONTACT -->
+      <div id="contact-us">
+        <div class="section-header" id="contact-header">
+          Contact us
+        </div>
+        <form id="contact-form">
+          <input type="text" name="contact-name" placeholder="Pingu">
+          <label>Contact name</label>
+          <input type="email" name="email" placeholder="pingu@bunnysoft.com">
+          <label>Email</label>
+          <input type="tel" name="phone-number" pattern="+65[8-9]{1}[0-9]{7}" placeholder="+65">
+          <label>Phone number</label>
+          <select name="service-type">
+            <option value="broke">Broke</option>
+            <option value="woke">Woke</option>
+            <option value="bespoke">Bespoke</option>
+          </select>
+          <label>Service type</label>
+          <div>
+            <input type="submit" id="submit-button">
+          </div>
+        </form>
+      </div>
+
+      <!-- FOOTER -->
+      {% include "components/footer.html" %}
     </div>
-    <div id="whatever">
-      That's word to my flag, and my flag red.
-      I'm out of my head, bitch, I'm outta my mind, from the bottom I climb.
-      You ain't hotter than mine, nope, not on my time and I'm not even trying.
-      What's poppin' Slime? Nothin', five, and if they trippin' fuck 'em, five.
-      I ain't got no time to shuck and jive, these niggas as sweet as pumpkin pie.
-      Cîroc and Sprite on a private flight.
-      Bitch, I been tight since Guiding Light.<br><br>
-    
-      And my pockets white, and my diamonds white.
-      And my mommas nice and my daddy's dead.
-      You faggots scared 'cause I'm too wild.
-      Been here for a while I was like, "Fuck trial".
-      I puts it down, I'm so Young Money.
-      If you got eyes look at me now...<br><br>
-    </div>
   </div>
-  <div id="copyright">
-    Copyright © 2024 Bunnysoft Corp ®
-  </div>
+  
+
+  
 {% endblock %}
