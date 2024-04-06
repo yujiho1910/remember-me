@@ -10,8 +10,5 @@ from flask import render_template, redirect
 # Declare type
 
 
-def index():
-    return render_template('index.html')
-
-def upload_auth():
-    return render_template('upload_auth.html')
+def upload(content_id):
+    return render_template(f'upload.html', content_id=content_id)
