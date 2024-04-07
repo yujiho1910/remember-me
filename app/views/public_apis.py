@@ -13,14 +13,15 @@ from boto3.dynamodb.conditions import Attr
 def login():
     access = request.json.get('access')
 
-    dynamodb = boto3.resource('dynamodb')
+    dynamodb = boto3.resource('dynamodb', region_name='ap-southeast-1')
     content_table = dynamodb.Table('content-test')
 
     scan_response = content_table.scan(
         FilterExpression=Attr('access_token').eq(access)
     )
-    content = next(iter(scan_response["Items"]))
-    if content:
+
+    if scan_response["Items"]:
+        content = next(iter(scan_response["Items"]))
         content_id = content["content_id"]
 
         return {
