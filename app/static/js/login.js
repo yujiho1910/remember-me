@@ -3,6 +3,8 @@ const loginForm = document.getElementById('login-form');
 function login(e) {
     e.preventDefault();
     let access = document.getElementById('access-code').value;
+    console.log("Access code: " + access)
+    console.log("Initiating API call to Lambda to handle upload with access token...")
 
     fetch("/api/login", {
         method: "POST",

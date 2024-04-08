@@ -98,13 +98,13 @@
           Contact us
         </div>
         <form id="contact-form">
-          <input type="text" name="contact-name" placeholder="Pingu">
+          <input type="text" name="contact-name" id="contact_name" placeholder="Pingu">
           <label>Contact name</label>
-          <input type="email" name="email" placeholder="pingu@bunnysoft.com">
+          <input type="email" name="email" id="email" placeholder="pingu@bunnysoft.com">
           <label>Email</label>
-          <input type="tel" name="phone-number" pattern="+65[8-9]{1}[0-9]{7}" placeholder="+65">
+          <input type="tel" name="phone-number" id="phone-number" pattern="+65[8-9]{1}[0-9]{7}" placeholder="+65">
           <label>Phone number</label>
-          <select name="service-type">
+          <select name="service-type" id="service-type">
             <option value="broke">Broke</option>
             <option value="woke">Woke</option>
             <option value="bespoke">Bespoke</option>
@@ -121,6 +121,6 @@
     </div>
   </div>
   
-
+  <script src="../static/js/contact.js"></script>
   
 {% endblock %}
